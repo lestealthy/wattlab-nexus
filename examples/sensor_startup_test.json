@@ -1,0 +1,28 @@
+{
+  "name": "Sensor Startup Test",
+  "power": {
+    "voltage": 3.3,
+    "enabled": true
+  },
+  "tests": [
+    {
+      "type": "delay",
+      "ms": 500
+    },
+    {
+      "type": "i2c_scan",
+      "expect": ["0x76"]
+    },
+    {
+      "type": "uart_expect",
+      "text": "READY",
+      "timeout": 2000
+    },
+    {
+      "type": "gpio_expect",
+      "pin": "D5",
+      "state": "HIGH",
+      "timeout": 1000
+    }
+  ]
+}

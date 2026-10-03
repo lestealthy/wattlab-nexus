@@ -1,0 +1,31 @@
+{
+  "name": "Power-On Capture",
+  "power": {
+    "voltage": 5.0,
+    "enabled": true
+  },
+  "tests": [
+    {
+      "type": "power_set",
+      "voltage": 5.0,
+      "current_limit": 0.5
+    },
+    {
+      "type": "delay",
+      "ms": 100
+    },
+    {
+      "type": "power_measure",
+      "duration_ms": 1000
+    },
+    {
+      "type": "uart_expect",
+      "text": "BOOT",
+      "timeout": 2000
+    },
+    {
+      "type": "i2c_scan",
+      "expect": ["0x68", "0x76"]
+    }
+  ]
+}

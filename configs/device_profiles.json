@@ -1,0 +1,39 @@
+{
+  "profiles": [
+    {
+      "name": "Generic DUT",
+      "voltage": 3.3,
+      "interfaces": ["i2c", "uart", "gpio"]
+    },
+    {
+      "name": "Sensor",
+      "voltage": 3.3,
+      "interfaces": ["i2c", "spi"],
+      "expected_devices": ["bme280", "mpu6050"]
+    },
+    {
+      "name": "ESP32",
+      "voltage": 3.3,
+      "interfaces": ["uart", "gpio"],
+      "baud": 115200
+    },
+    {
+      "name": "Arduino",
+      "voltage": 5.0,
+      "interfaces": ["uart", "i2c", "spi", "gpio"],
+      "baud": 9600
+    },
+    {
+      "name": "STM32",
+      "voltage": 3.3,
+      "interfaces": ["uart", "i2c", "spi", "can"],
+      "baud": 115200
+    },
+    {
+      "name": "Automotive ECU",
+      "voltage": 12.0,
+      "interfaces": ["can"],
+      "can_bitrate": 500000
+    }
+  ]
+}

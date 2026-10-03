@@ -1,0 +1,24 @@
+#ifndef NEXUS_ERRORS_H
+#define NEXUS_ERRORS_H
+
+typedef enum {
+    NEXUS_OK = 0,
+    NEXUS_ERR_GENERIC = -1,
+    NEXUS_ERR_TIMEOUT = -2,
+    NEXUS_ERR_INVALID_CONFIG = -3,
+    NEXUS_ERR_RESOURCE_BUSY = -4,
+    NEXUS_ERR_PROTOCOL = -5,
+    NEXUS_ERR_CALIBRATION = -6,
+    NEXUS_ERR_HARDWARE = -7,
+    NEXUS_ERR_STORAGE = -8,
+    NEXUS_ERR_MEMORY = -9,
+    NEXUS_ERR_INVALID_PARAM = -10,
+    NEXUS_ERR_NOT_FOUND = -11,
+    NEXUS_ERR_BUFFER_OVERFLOW = -12,
+    NEXUS_ERR_NOT_SUPPORTED = -13,
+    NEXUS_ERR_SAFETY = -14,
+} nexus_err_t;
+
+const char* nexus_err_string(nexus_err_t err);
+
+#endif

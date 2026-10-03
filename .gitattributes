@@ -1,0 +1,10 @@
+# Normalize line endings; keep scripts runnable on Windows.
+* text=auto
+*.cpp text
+*.h text
+*.ino text
+*.md text
+*.json text
+*.ps1 text
+*.bat text eol=crlf
+*.svg text

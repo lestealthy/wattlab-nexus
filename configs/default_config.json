@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "display": {
+    "brightness": 80,
+    "theme": 0,
+    "sound_enabled": true,
+    "log_level": 2,
+    "log_outputs": 1
+  },
+  "uart": {
+    "default_baud": 115200,
+    "default_bits": 8,
+    "default_parity": "N",
+    "default_stop": 1
+  },
+  "i2c": {
+    "default_freq": 100000
+  },
+  "spi": {
+    "default_freq": 1000000,
+    "default_mode": 0,
+    "default_bits": 8
+  },
+  "can": {
+    "default_bitrate": 500000
+  },
+  "discovery": {
+    "auto_discover": false,
+    "timeout_ms": 5000
+  },
+  "system": {
+    "demo_mode": false,
+    "virtual_dut": false
+  }
+}
